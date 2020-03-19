@@ -12,7 +12,9 @@ root = Tk()
 print("Добро пожаловать в прогу версия 0.6. Роберт Ислямов"  )
 print("Выбери файл, который нужно конвертировать")
 file = askopenfilename()
+
 print('{:*^60}'.format('Данные'))
+
 with open(file, "rb") as image_file:
     encoded_string = base64.b64encode(image_file.read())
     encoded_string = str(encoded_string)
@@ -41,7 +43,7 @@ print('{: ^60}'.format(buf))
 
 print("")
 print("")
-
+root.destroy()
 input('Нажми  ENTER чтобы выйти')
 
 
